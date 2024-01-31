@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EntityTestActivity">
+
+    <ImageView
+        android:id="@+id/etPhotoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inputArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etPhotoImageView">
+
+        <EditText
+            android:id="@+id/etDateEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            app:layout_constraintBottom_toTopOf="@id/etPlaceEditText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etPlaceEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBottom_toTopOf="@id/etCommentEditText"
+            app:layout_constraintEnd_toEndOf="@id/etDateEditText"
+            app:layout_constraintStart_toStartOf="@id/etDateEditText"
+            app:layout_constraintTop_toBottomOf="@id/etDateEditText" />
+
+        <EditText
+            android:id="@+id/etCommentEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name"
+            app:layout_constraintBottom_toTopOf="@id/etSaveButton"
+            app:layout_constraintEnd_toEndOf="@id/etDateEditText"
+            app:layout_constraintStart_toStartOf="@id/etDateEditText"
+            app:layout_constraintTop_toBottomOf="@id/etPlaceEditText" />
+
+        <Button
+            android:id="@+id/etChooseButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="choose"
+            app:layout_constraintBottom_toBottomOf="@+id/etSaveButton"
+            app:layout_constraintEnd_toStartOf="@id/etToggleImageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etSaveButton" />
+
+        <Button
+            android:id="@+id/etToggleImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Toggle"
+            app:layout_constraintBottom_toBottomOf="@+id/etSaveButton"
+            app:layout_constraintEnd_toStartOf="@id/etSaveButton"
+            app:layout_constraintStart_toEndOf="@id/etChooseButton"
+            app:layout_constraintTop_toTopOf="@+id/etSaveButton" />
+
+        <Button
+            android:id="@+id/etSaveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/etToggleImageButton"
+            app:layout_constraintTop_toBottomOf="@id/etCommentEditText" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

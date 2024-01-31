@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">MineMemory</string>
+    <string name="backButton">戻る</string>
+    <string name="deleteButton">消去</string>
+    <string name="KeepButton">確定</string>
+    <string name="placeregistrationButton">地点登録</string>
+    <string name="placelistButton">地点一覧</string>
+    <string name="date">日付</string>
+    <string name="placename">場所の名前</string>
+    <string name="comment">コメント</string>
+    <string name="dateinput">日付を入力</string>
+    <string name="placenameinput">場所の名前を入力</string>
+    <string name="commentinput">コメントを入力</string>
 </resources>
