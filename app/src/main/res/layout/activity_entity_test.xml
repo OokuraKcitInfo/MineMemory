@@ -4,15 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EntityTestActivity">
+    tools:context=".activity.EntityTestActivity">
 
     <ImageView
         android:id="@+id/etPhotoImageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="400dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_camera"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -30,6 +31,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="date"
+            android:text="2024-01-31"
             app:layout_constraintBottom_toTopOf="@id/etPlaceEditText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +43,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
             app:layout_constraintBottom_toTopOf="@id/etCommentEditText"
             app:layout_constraintEnd_toEndOf="@id/etDateEditText"
             app:layout_constraintStart_toStartOf="@id/etDateEditText"
@@ -53,7 +54,6 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name"
             app:layout_constraintBottom_toTopOf="@id/etSaveButton"
             app:layout_constraintEnd_toEndOf="@id/etDateEditText"
             app:layout_constraintStart_toStartOf="@id/etDateEditText"
@@ -64,6 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="choose"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/etSaveButton"
             app:layout_constraintEnd_toStartOf="@id/etToggleImageButton"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,10 +75,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Toggle"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="@+id/etSaveButton"
             app:layout_constraintEnd_toStartOf="@id/etSaveButton"
-            app:layout_constraintStart_toEndOf="@id/etChooseButton"
-            app:layout_constraintTop_toTopOf="@+id/etSaveButton" />
+            app:layout_constraintStart_toEndOf="@id/etChooseButton" />
 
         <Button
             android:id="@+id/etSaveButton"
@@ -85,9 +86,19 @@
             android:layout_height="wrap_content"
             android:text="Save"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/etLoadButton"
             app:layout_constraintStart_toEndOf="@+id/etToggleImageButton"
             app:layout_constraintTop_toBottomOf="@id/etCommentEditText" />
+
+        <Button
+            android:id="@+id/etLoadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="load"
+            app:layout_constraintBottom_toBottomOf="@+id/etSaveButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/etSaveButton"
+            app:layout_constraintTop_toTopOf="@+id/etSaveButton" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -25,14 +25,15 @@ public class PostEntity {
     private String comment;
     @ColumnInfo(name = "date")
     private String date;
-    @ColumnInfo(name = "picture")
+    @ColumnInfo(name = "picture", typeAffinity = ColumnInfo.BLOB)
     private byte[] byteArrayPicture;
 
+    @Ignore
     private Bitmap bitmapPicture;
 
-    @Ignore
     public PostEntity() { }
 
+    @Ignore
     public PostEntity(double latitude, double longitude, String date, String placeName, Bitmap bitmapPicture) {
         setLatitude(latitude);
         setLongitude(longitude);
@@ -98,6 +99,7 @@ public class PostEntity {
         return BitmapFactory.decodeByteArray(getByteArrayPicture(), 0, getByteArrayPicture().length);
     }
 
+    @Ignore
     private boolean isConvert = false;
     public void setByteArrayPicture(byte[] byteArrayPicture) {
         this.byteArrayPicture = byteArrayPicture;

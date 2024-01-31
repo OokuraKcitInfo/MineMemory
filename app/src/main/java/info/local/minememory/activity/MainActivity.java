@@ -1,4 +1,4 @@
-package info.local.minememory;
+package info.local.minememory.activity;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -15,6 +15,7 @@ import android.widget.Button;
 import java.io.BufferedInputStream;
 import java.io.InputStream;
 
+import info.local.minememory.R;
 import info.local.minememory.util.Constant;
 
 public class MainActivity extends AppCompatActivity {

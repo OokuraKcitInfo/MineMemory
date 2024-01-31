@@ -12,10 +12,10 @@
         android:theme="@style/Theme.MineMemory"
         tools:targetApi="31">
         <activity
-            android:name=".EntityTestActivity"
+            android:name=".activity.EntityTestActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,9 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PlaceListActivity" />
-        <activity android:name=".PlaceRegistrationActivity" />
-        <activity android:name=".PictureZoomActivity" />
+        <activity android:name=".activity.PlaceListActivity" />
+        <activity android:name=".activity.PlaceRegistrationActivity" />
+        <activity android:name=".activity.PictureZoomActivity" />
     </application>
 
 </manifest>

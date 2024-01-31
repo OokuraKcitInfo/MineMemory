@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/prPictureArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/prFooterArea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prHeaderArea">
+
+        <ImageView
+            android:id="@+id/prImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toTopOf="@+id/prPictureArea"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/prHeaderArea"
+        android:layout_width="match_parent"
+        android:layout_height="141dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/prKeepButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/KeepButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/prBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="80dp"
+            android:text="@string/backButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/prFooterArea"
+        android:layout_width="match_parent"
+        android:layout_height="234dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/prCommentEditText"
+            android:layout_width="161dp"
+            android:layout_height="57dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/commentinput"
+            app:layout_constraintBottom_toBottomOf="@+id/prComentTextView"
+            app:layout_constraintEnd_toEndOf="@+id/prPlaceNameEditText"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/prComentTextView"
+            app:layout_constraintTop_toTopOf="@+id/prComentTextView" />
+
+        <EditText
+            android:id="@+id/prPlaceNameEditText"
+            android:layout_width="161dp"
+            android:layout_height="55dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/placenameinput"
+            app:layout_constraintBottom_toBottomOf="@+id/prPlaceNameTextView"
+            app:layout_constraintStart_toEndOf="@+id/prPlaceNameTextView"
+            app:layout_constraintTop_toTopOf="@+id/prPlaceNameTextView" />
+
+        <EditText
+            android:id="@+id/prDateEditText"
+            android:layout_width="160dp"
+            android:layout_height="56dp"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:inputType="date"
+            android:text="@string/dateinput"
+            app:layout_constraintBottom_toBottomOf="@+id/prDateTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/prDateTextView"
+            app:layout_constraintTop_toTopOf="@+id/prDateTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/prComentTextView"
+            android:layout_width="161dp"
+            android:layout_height="57dp"
+            android:text="@string/comment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/prPlaceNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/prPlaceNameTextView"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/prPlaceNameTextView"
+            android:layout_width="162dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="3dp"
+            android:text="@string/placename"
+            app:layout_constraintStart_toStartOf="@+id/prDateTextView"
+            app:layout_constraintTop_toBottomOf="@+id/prDateTextView" />
+
+        <TextView
+            android:id="@+id/prDateTextView"
+            android:layout_width="162dp"
+            android:layout_height="54dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
